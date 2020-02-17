@@ -1,0 +1,61 @@
+/* body {
+  margin: 0;
+} */
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+#sidebar {
+  padding: 2rem 1rem;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+#sidebar h3 {
+  text-align: center;
+}
+
+#prev-searches {
+  list-style-type: none;
+  padding: 0;
+}
+
+#prev-searches li {
+  display: block;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+#prev-searches li:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+#container {
+  margin: 0 auto;
+  padding: 2rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+.random-img,
+.img-description {
+  width: 500px;
+  max-height: 500px;
+  /* border: 1px solid black; */
+  padding: 0.5rem;
+}
+
+.image {
+  margin-bottom: -5px;
+}
+.img-description {
+  margin-top: 0;
+  display: none;
+}
