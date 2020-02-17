@@ -14,8 +14,17 @@ let response = null;
 const previousSearches = JSON.parse(localStorage.getItem('previousSearches')) || [];
 
 if (version === 2) {
-  function displayMsg() {
-    console.log('enter a value');
+  function displayMsg(message) {
+    searchForm.insertAdjacentHTML(
+      'beforebegin',
+      `
+     <div class="msg">
+      <p>${message}</p>
+     </div>
+    `
+    );
+
+    setTimeout(() => document.querySelector('.msg').remove(), 3000);
   }
 
   function displayPrevSearches() {
@@ -63,7 +72,7 @@ if (version === 2) {
 
     const searchValue = searchInput.value.trim();
     if (!searchValue) {
-      displayMsg();
+      displayMsg('Enter search criteria!');
     } else {
       // create endpoint
       const endpoint = `${URL}${searchValue}`;
