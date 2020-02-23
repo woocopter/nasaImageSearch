@@ -46,7 +46,7 @@ if (version === 2) {
     const imgSrc = response[randomIndex].links[0].href;
     const { title, description } = response[randomIndex].data[0];
     const imgHTML = `<img class="random-img" src="${imgSrc}" alt="${title}">`;
-    imageDescription.innerText = description;
+    imageDescription.innerHTML = description;
     imageDescription.style.display = 'block';
     imageDiv.innerHTML = imgHTML;
   }

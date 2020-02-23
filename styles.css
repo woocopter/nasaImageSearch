@@ -1,8 +1,16 @@
 body {
   font-family: 'Abel', sans-serif;
+  background-image: url('./images/sky.jpg');
+  background-size: cover;
 }
+
 h1 {
   font-size: 3rem;
+}
+
+#container,
+#sidebar {
+  background: rgba(255, 255, 255, 0.42);
 }
 
 #grid-container {
@@ -83,6 +91,13 @@ form {
 
 .msg p {
   margin: 0.5rem 0;
+}
+
+.msg p::before {
+  content: '\26A0';
+  color: red;
+  margin-right: 1rem;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
